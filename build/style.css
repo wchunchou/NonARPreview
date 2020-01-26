@@ -13,11 +13,8 @@ html {
 }
 body {
     margin: 0px;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
     -webkit-overflow-scrolling: hidden;
-    position: fixed;
 }
 
 body,
@@ -199,6 +196,8 @@ body input.component:focus {
     }
 }
 
+/* Normally our spinners don't rely on the animation here,
+except for the one in preview/packages */
 .spinner {
     animation-name: spin;
     animation-duration: 800ms;
@@ -296,4 +295,8 @@ div.preview-console table {
 }
 div.preview-console table tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.04);
+}
+
+div.table-row:only-child div.system-typeface-element-separator {
+    display: none;
 }
